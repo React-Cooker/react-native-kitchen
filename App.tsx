@@ -5,16 +5,18 @@
  * @format
  */
 
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
+// aimport { NewAppScreen } from '@react-native/new-app-screen';
+import { /*StatusBar,*/ StyleSheet, /*useColorScheme,*/ View, Text, Button} from 'react-native';
+//import { Button } from 'react-native/types_generated/index';
 
 function App() {
-  const isDarkMode = useColorScheme() === 'dark';
-
+  function sayHello(){
+    console.log("Merhaba React")
+  }
   return (
-    <View style={styles.container}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <NewAppScreen templateFileName="App.tsx" />
+    <View>
+      <Text>Merhaba Yakup</Text>
+      <Button title="Press me" onPress={() => {sayHello()}} disabled={false}/>
     </View>
   );
 }
