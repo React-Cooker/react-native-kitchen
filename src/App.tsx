@@ -12,14 +12,10 @@ import { StatusBar, StyleSheet,SafeAreaView,  View, Text, TouchableOpacity, Butt
 //import { Button } from 'react-native/types_generated/index';
 import Card from './components/Card'
 function App() {
-  function sayHello(){
-    console.log("Merhaba React")
-  }
+  
   return (
     <SafeAreaView style={styles.safeView}>
-      <Card title="Bill Gates" text="Next Next Next!"/>
-      <Card title="Linus Torvalds" text="Talk is cheap. Show me the code."/>
-      <Card title="Richard Stallman" text="Free software, free society."/>
+      
     </SafeAreaView>
     
   );
