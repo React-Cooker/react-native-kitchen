@@ -7,15 +7,19 @@
 
 // aimport { NewAppScreen } from '@react-native/new-app-screen';
 import { StatusBar, StyleSheet,SafeAreaView,  View, Text, TouchableOpacity, Button} from 'react-native';
-//import { StatusBar } from 'react-native/types_generated/index';
+import { useState } from 'react';
 //import { SafeAreaView } from 'react-native/types_generated/index';
 //import { Button } from 'react-native/types_generated/index';
 import Card from './components/Card'
 function App() {
-  
+  const [counter, setCounter] = useState(0);
+  function updateCounter(){
+    setCounter(counter+1);
+  }
   return (
     <SafeAreaView style={styles.safeView}>
-      
+      <Text>Conter: {counter}</Text>
+      <Button title='up counter' onPress={updateCounter}/>
     </SafeAreaView>
     
   );
